@@ -1,0 +1,10 @@
+{% extends 'announcements/base.html' %}
+{% block content %}
+
+THE HOME PAGE
+
+{% for entry in announcements %}
+    <p> {{ entry.title }} </p>
+{% endfor %}
+
+{% endblock %}
