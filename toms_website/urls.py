@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from announcements import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('index/', views.index, name='index'),
+    path('left_sidebar/', views.left_sidebar, name='left_sidebar'),
+    path('right_sidebar/', views.right_sidebar, name='right_sidebar'),
+    path('no_sidebar/', views.no_sidebar, name='no_sidebar'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
